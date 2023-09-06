@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Requests Example</title>
+</head>
+<body>
+    <button id="getButton">GET Request</button>
+    <div>
+        <input id="postInput" type="text" placeholder="Enter data for POST">
+        <button id="postButton">POST Request</button>
+    </div>
+    <div>
+        <input id="putInput" type="text" placeholder="Enter data for PUT">
+        <button id="putButton">PUT Request</button>
+    </div>
+    <button id="deleteButton">DELETE Request</button>
+
+    <script>
+        document.getElementById("getButton").addEventListener("click", () => {
+            fetch("http://localhost:10001/test.ldi", {
+                method: "GET", mode:"cors" ,credentials:"include",
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error("Error:", error));
+        });
+
+        document.getElementById("postButton").addEventListener("click", () => {
+            const postData = document.getElementById("postInput").value;
+            fetch(`http://localhost:10001/test.ldi?result=${parseInt(postData)}`, {
+                method: "POST", credentials:"include",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error("Error:", error));
+        });
+
+        document.getElementById("putButton").addEventListener("click", () => {
+            const putData = document.getElementById("putInput").value;
+            fetch(`http://localhost:10001/test.ldi/?add=${parseInt(putData)}`, {
+                method: "PUT", credentials:"include",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error("Error:", error));
+        });
+
+        document.getElementById("deleteButton").addEventListener("click", () => {
+            fetch("http://localhost:10001/test.ldi", {
+                method: "DELETE", credentials:"include",
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error("Error:", error));
+        });
+    </script>
+</body>
+</html>
