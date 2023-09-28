@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Test Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>AJAX Test Page</h1>
+
+    <h2>GET Request</h2>
+    <button onclick="sendGetRequest()">Send GET Request</button>
+    <div id="get-response"></div>
+
+    <h2>POST Request</h2>
+    <input type="text" id="post-data" placeholder="Enter data">
+    <button onclick="sendPostRequest()">Send POST Request</button>
+    <div id="post-response"></div>
+
+    <h2>PUT Request</h2>
+    <input type="text" id="put-data" placeholder="Enter data">
+    <button onclick="sendPutRequest()">Send PUT Request</button>
+    <div id="put-response"></div>
+
+    <h2>DELETE Request</h2>
+    <button onclick="sendDeleteRequest()">Send DELETE Request</button>
+    <div id="delete-response"></div>
+
+    <script>
+        const baseUrl = 'http://localhost:10002/test.ldi';
+
+        function handleErrorResponse(jqXHR, textStatus, errorThrown) {
+            console.error(`Request failed with status: ${textStatus}, error: ${errorThrown}`);
+        }
+
+        function sendGetRequest() {
+            $.get(baseUrl)
+                .done(function (data) {
+                    $('#get-response').html(JSON.stringify(data));
+                })
+                .fail(handleErrorResponse);
+        }
+
+        function sendPostRequest() {
+            const postData = $('#post-data').val();
+            $.post(`${baseUrl}?result=${postData}`)
+                .done(function (data) {
+                    $('#post-response').html(JSON.stringify(data));
+                })
+                .fail(handleErrorResponse);
+        }
+
+        function sendPutRequest() {
+            const putData = $('#put-data').val();
+            $.ajax({
+                url: `${baseUrl}?add=${putData}`,
+                type: 'PUT',
+            })
+                .done(function (data) {
+                    $('#put-response').html(JSON.stringify(data));
+                })
+                .fail(handleErrorResponse);
+        }
+
+        function sendDeleteRequest() {
+            $.ajax({
+                url: baseUrl,
+                type: 'DELETE',
+            })
+                .done(function (data) {
+                    $('#delete-response').html(JSON.stringify(data));
+                })
+                .fail(handleErrorResponse);
+        }
+    </script>
+</body>
+</html>
