@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DBContext-Web.config Connection String" description="DBContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Study\PIS\Lab3\App_Data\Students.mdf;Integrated Security=True;Connect Timeout=30" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Study\\PIS\\Lab3\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBContext']/@connectionString" />
+  </parameter>
+</parameters>

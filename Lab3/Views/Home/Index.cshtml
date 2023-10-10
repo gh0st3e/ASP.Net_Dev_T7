@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <style>
+        body{
+            background-color: yellow;
+            background: linear-gradient(yellow, orange);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        tr{
+            font-size: large;
+            border: 1px solid green;
+        }
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список студентов</h1>
+    <button id="refreshButton">Обновить</button>
+    <button id="refreshXMLButton" onclick="getXMLStudents()">Обновить XML</button>
+    </br>
+    <label for="limit">Limit:</label>
+    <input type="text" id="limit" name="limit">
+    <label for="offset">Offset:</label>
+    <input type="text" id="offset" name="offset">
+    <label for="minID">Min ID:</label>
+    <input type="text" id="minID" name="minID">
+    <label for="maxID">Max ID:</label>
+    <input type="text" id="maxID" name="maxID">
+    <label for="like">Like:</label>
+    <input type="text" id="like" name="like">
+    <label for="globalLike">Global Like:</label>
+    <input type="text" id="globalLike" name="globalLike">
+    </br>
+    <label for="order">Order:</label>
+    <input type="radio" id="orderYes" name="order" value="asc">
+    <label for="orderYes">Да</label>
+    <input type="radio" id="orderNo" name="order" value="">
+    <label for="orderNo">Нет</label>
+    <label for="columns">Columns:</label>
+    <input type="checkbox" id="columnName" name="columnName" value="name">
+    <label for="columnName">Имя</label>
+    <input type="checkbox" id="columnPhone" name="columnPhone" value="phone">
+    <label for="columnPhone">Телефон</label>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody id="studentList">
+            <!-- Здесь будут отображаться студенты -->
+
+        </tbody>
+        <button id="prevPageButton">Предыдущая страница</button>
+        <button id="nextPageButton">Следующая страница</button>
+
+    </table>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Редактировать студента</h2>
+            <form id="editStudentForm">
+                <input type="hidden" id="editStudentId" name="editStudentId">
+                <label for="editName">Имя:</label>
+                <input type="text" id="editName" name="editName" required>
+                <label for="editPhone">Телефон:</label>
+                <input type="text" id="editPhone" name="editPhone" required>
+                <button type="button" onclick="updateStudent()">Сохранить</button>
+                <button type="button" onclick="updateStudentXML()">Сохранить XML</button>
+                <button type="button" onclick="closeEditModal()">Отмена</button>
+            </form>
+        </div>
+    </div>
+
+
+    <h2>Добавить студента</h2>
+    <form id="addStudentForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone" required>
+        <button type="submit">Добавить</button>
+    </form>
+    <input type="button" onclick="addXMLStudent()" value="Добавить XML" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const studentList = document.getElementById('studentList');
+        const refreshButton = document.getElementById('refreshButton');
+        const limitInput = document.getElementById('limit');
+        const offsetInput = document.getElementById('offset');
+        const minIDInput = document.getElementById('minID');
+        const maxIDInput = document.getElementById('maxID');
+        const likeInput = document.getElementById('like');
+        const globalLikeInput = document.getElementById('globalLike');
+        const orderYes = document.getElementById('orderYes');
+        const orderNo = document.getElementById('orderNo');
+        const columnId = document.getElementById('columnId');
+        const columnName = document.getElementById('columnName');
+        const columnPhone = document.getElementById('columnPhone');
+
+        const editModal = document.getElementById('editModal');
+        const editStudentId = document.getElementById('editStudentId');
+        const editName = document.getElementById('editName');
+        const editPhone = document.getElementById('editPhone');
+
+        let currentPage = 0; // Добавьте переменную для отслеживания текущей страницы
+
+        function getStudents() {
+            const params = new URLSearchParams({
+                limit: limitInput.value || 5,
+                offset: currentPage * (limitInput.value || 5), 
+                minID: minIDInput.value || -1000,
+                maxID: maxIDInput.value || 1000,
+            });
+
+            url = `http://localhost:10003/api/students?${params.toString()}`
+
+            if (likeInput.value != "") {
+                url += `&like=${likeInput.value}`
+            }
+            if (globalLikeInput.value != "") {
+                url += `&globalLike=${globalLikeInput.value}`
+            }
+            if (orderYes.checked) {
+                url += `&order=1`
+            }
+            columns = `&columns=`
+            isColumns = false
+            if (columnName.checked) {
+                columns += `name`
+                isColumns = true
+            }
+            if (columnPhone.checked) {
+                columns += `phone`
+                isColumns = true
+            }
+
+            if (isColumns) {
+                url += columns
+            }
+
+            console.log(params.toString())
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    studentList.innerHTML = ''; // Очищаем текущий список
+                    if (data[0]==null) {
+                        currentPage-=1
+                        getStudents()
+                    }
+                    data.forEach(student => {
+                        link = student._links.selfStudent
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                                        <td>${student.Id}</td>
+                                        <td>${student.Name}</td>
+                                        <td>${student.Phone}</td>
+                                        <td>
+                                            <button onclick="editStudent('${link}')">Редактировать</button>
+                                            <button onclick="deleteStudent('${link}')">Удалить</button>
+                                            <button onclick="deleteStudentXML('${link}')">Удалить XML</button>
+                                        </td>
+                                    `;
+                        studentList.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Ошибка при получении студентов:', error));
+        }
+
+        const prevPageButton = document.getElementById('prevPageButton');
+        const nextPageButton = document.getElementById('nextPageButton');
+
+        prevPageButton.addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                getStudents();
+            }
+        });
+
+        nextPageButton.addEventListener('click', () => {
+            currentPage++;
+            getStudents();
+        });
+
+        function getXMLStudents() {
+            const params = new URLSearchParams({
+                limit: limitInput.value || 5,
+                offset: offsetInput.value || 0,
+                minID: minIDInput.value || -1000,
+                maxID: maxIDInput.value || 1000,
+            });
+
+            url = `http://localhost:10003/api/students.xml/?${params.toString()}`
+
+
+            if (likeInput.value != "") {
+                url += `&like=${likeInput.value}`
+            }
+            if (globalLikeInput.value != "") {
+                url += `&globalLike=${globalLikeInput.value}`
+            }
+            if (orderYes.checked) {
+                url += `&order=1`
+            }
+            columns = `&columns=`
+            isColumns = false
+            if (columnName.checked) {
+                columns += `name`
+                isColumns = true
+            }
+            if (columnPhone.checked) {
+                columns += `phone`
+                isColumns = true
+            }
+
+            if (isColumns) {
+                url += columns
+            }
+
+            console.log(params.toString())
+            console.log(url)
+
+            fetch(url)
+                .then(response => response.text()) // Получаем XML как текст
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml"); // Преобразуем текст в XML документ
+
+                    studentList.innerHTML = ''; // Очищаем текущий список
+
+                    const students = xmlDoc.querySelectorAll('ArrayOfStudent > Student'); // Выбираем все <Student> внутри <ArrayOfStudent>
+
+                    students.forEach(student => {
+                        const id = student.querySelector('Id').textContent;
+                        const name = student.querySelector('Name').textContent;
+                        const phone = student.querySelector('Phone').textContent;
+
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                <td>${id}</td>
+                <td>${name}</td>
+                <td>${phone}</td>
+                <td>
+                    <button onclick="editStudent(${id})">Редактировать</button>
+                    <button onclick="deleteStudent(${id})">Удалить</button>
+                    <button onclick="deleteStudentXML('${link}')">Удалить XML</button>
+                </td>
+            `;
+                        studentList.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Ошибка при получении студентов:', error));
+
+        }
+
+
+        function addStudent() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            const data = {
+                name: name,
+                phone: phone
+            };
+
+            fetch('http://localhost:10003/api/students', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data)
+                    getStudents();
+                    document.getElementById('name').value = '';
+                    document.getElementById('phone').value = '';
+                })
+                .catch(error => console.error('Ошибка при добавлении студента:', error));
+        }
+
+        function addXMLStudent() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            const data = {
+                name: name,
+                phone: phone
+            };
+
+            fetch('http://localhost:10003/api/students.xml/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text()) // Ответ будет в формате XML, поэтому используйте response.text() вместо response.json()
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+
+                    // Теперь вы можете обработать XML-данные и выполнить необходимые действия
+                    const id = xmlDoc.querySelector('Id').textContent; // Пример получения значения Id из XML
+                    const name = xmlDoc.querySelector('Name').textContent; // Пример получения значения Name из XML
+                    const phone = xmlDoc.querySelector('Phone').textContent; // Пример получения значения Phone из XML
+
+                    // Далее выполните необходимые действия с полученными данными (например, обновите интерфейс)
+                    console.log("ID: " + id);
+                    console.log("Name: " + name);
+                    console.log("Phone: " + phone);
+
+                    getStudents();
+                    document.getElementById('name').value = '';
+                    document.getElementById('phone').value = '';
+                })
+                .catch(error => console.error('Ошибка при добавлении студента:', error));
+        }
+
+        function editStudent(link) {
+            fetch(link)
+                .then(response => response.json())
+                .then(student => {
+                    editStudentId.value = student.Id;
+                    editName.value = student.Name;
+                    editPhone.value = student.Phone;
+                    editModal.style.display = 'block'; // Открываем модальное окно
+                })
+                .catch(error => console.error('Ошибка при получении данных студента для редактирования:', error));
+        }
+
+        function closeEditModal() {
+            editModal.style.display = 'none'; // Закрываем модальное окно
+        }
+
+        function updateStudent() {
+            const id = editStudentId.value;
+            const name = editName.value;
+            const phone = editPhone.value;
+
+            const data = {
+                id:id,
+                name: name,
+                phone: phone
+            };
+
+            fetch(link, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    closeEditModal();
+                    getStudents();
+                })
+                .catch(error => console.log('Ошибка при получении данных студента для редактирования:', error));
+        }
+
+        function updateStudentXML() {
+            const id = editStudentId.value;
+            const name = editName.value;
+            const phone = editPhone.value;
+
+            const data = {
+                id: id,
+                name: name,
+                phone: phone
+            };
+
+            link = link.replace('/students/', '/students.xml/'); 
+
+            fetch(link, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text()) // Ответ будет в формате XML, поэтому используйте response.text() вместо response.json()
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+
+                    // Теперь вы можете обработать XML-данные и выполнить необходимые действия
+                    const message = xmlDoc.querySelector('Student').textContent; // Пример получения значения Message из XML
+
+                    // Далее выполните необходимые действия с полученными данными (например, обновите интерфейс)
+                    console.log("Message: " + message);
+
+                    closeEditModal();
+                    getStudents();
+                })
+                .catch(error => console.error('Ошибка при редактировании студента:', error));
+        }
+
+
+
+        function deleteStudent(link) {
+            // Отправьте DELETE-запрос на сервер для удаления студента
+            fetch(link, {
+                method: 'DELETE'
+            })
+                .then(() => {
+                    getStudents();
+                })
+                .catch(error => console.error('Ошибка при удалении студента:', error));
+        }
+
+        function deleteStudentXML(link) {
+            link = link.replace('/students/', '/students.xml/'); 
+            fetch(link, {
+                method: 'DELETE'
+            })
+                .then(response => response.text()) // Ответ будет в формате XML, поэтому используйте response.text() вместо response.json()
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+
+                    // Теперь вы можете обработать XML-данные и выполнить необходимые действия
+                    const message = xmlDoc.querySelector('Student').textContent; // Пример получения значения Message из XML
+
+                    // Далее выполните необходимые действия с полученными данными (например, обновите интерфейс)
+                    console.log("Message: " + message);
+
+                    getStudents();
+                })
+                .catch(error => console.error('Ошибка при удалении студента:', error));
+        }
+
+
+        refreshButton.addEventListener('click', getStudents);
+        document.getElementById('addStudentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            addStudent();
+        });
+
+        // Загрузить список студентов при загрузке страницы
+        getStudents();
+    </script>
+</body>
+</html>
