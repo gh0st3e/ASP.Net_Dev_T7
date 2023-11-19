@@ -1,0 +1,10 @@
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.csproj.AssemblyReference.cache
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.Properties.Resources.resources
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.csproj.GenerateResource.cache
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.csproj.CoreCompileInputs.cache
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\bin\Debug\WinForm_Proxy.exe.config
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\bin\Debug\WinForm_Proxy.exe
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\bin\Debug\WinForm_Proxy.pdb
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.exe
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.pdb
+D:\Study\PIS\Lab4_Clients\WinForm_Proxy\obj\Debug\WinForm_Proxy.Form1.resources

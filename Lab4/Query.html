@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка JSON-запроса</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <label for="xInput">Введите значение x:</label>
+    <input type="number" id="xInput" name="xInput"><br><br>
+
+    <label for="yInput">Введите значение y:</label>
+    <input type="number" id="yInput" name="yInput"><br><br>
+
+    <button id="sendRequest">Отправить запрос</button>
+
+    <div id="resultDiv"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#sendRequest").click(function () {
+                var xValue = $("#xInput").val();
+                var yValue = $("#yInput").val();
+
+                if (!xValue || !yValue) {
+                    alert("Пожалуйста, введите значения x и y.");
+                    return;
+                }
+
+                var requestData = {
+                    data: {
+                        x: parseInt(xValue),
+                        y: parseInt(yValue)
+                    }
+                };
+
+                $.ajax({
+                    url: "http://localhost:64630/Simplex.asmx/AddS", 
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(requestData),
+                    success: function (response) {
+                        console.log("Ответ:", response);
+                        $("#resultDiv").text("Результат: " + response.d);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Ошибка:", error);
+                        $("#resultDiv").text("Ошибка: " + error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

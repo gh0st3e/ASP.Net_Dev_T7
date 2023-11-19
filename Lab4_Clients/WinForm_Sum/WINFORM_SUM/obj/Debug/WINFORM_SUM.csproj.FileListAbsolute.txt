@@ -1,0 +1,109 @@
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe.config
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.pdb
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.AssemblyReference.cache
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Form1.resources
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Properties.Resources.resources
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.GenerateResource.cache
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CoreCompileInputs.cache
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.exe
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.pdb
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.dll
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.dll
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.dll
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.pdb
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.xml
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.pdb
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.xml
+H:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CopyComplete
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe.config
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.pdb
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.dll
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.dll
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.dll
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.pdb
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.xml
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.pdb
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.xml
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.AssemblyReference.cache
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Form1.resources
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Properties.Resources.resources
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.GenerateResource.cache
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CoreCompileInputs.cache
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CopyComplete
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.exe
+D:\LabsFolder\_4_1\InternetLabs\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.pdb
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe.config
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.pdb
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.dll
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.dll
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.dll
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.pdb
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.xml
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.pdb
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.xml
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.AssemblyReference.cache
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Form1.resources
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Properties.Resources.resources
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.GenerateResource.cache
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CoreCompileInputs.cache
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CopyComplete
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.exe
+B:\asp-internet\furs4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.pdb
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe.config
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.pdb
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.dll
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.dll
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.dll
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.pdb
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.xml
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.pdb
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.xml
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.AssemblyReference.cache
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Form1.resources
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Properties.Resources.resources
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.GenerateResource.cache
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CoreCompileInputs.cache
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CopyComplete
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.exe
+B:\asp-internet\labs\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.pdb
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe.config
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.pdb
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.dll
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.dll
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.dll
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.pdb
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.xml
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.pdb
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.xml
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.AssemblyReference.cache
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.SuggestedBindingRedirects.cache
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Form1.resources
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Properties.Resources.resources
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.GenerateResource.cache
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CoreCompileInputs.cache
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CopyComplete
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.exe
+D:\НР\Мое\XRabell\БГТУ\4курс1сем\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.pdb
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe.config
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.exe
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\WINFORM_SUM.pdb
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.dll
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.dll
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.dll
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.pdb
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.xml
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Flurl.Http.pdb
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\bin\Debug\Newtonsoft.Json.xml
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.AssemblyReference.cache
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Form1.resources
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.Properties.Resources.resources
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.GenerateResource.cache
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CoreCompileInputs.cache
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.csproj.CopyComplete
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.exe
+D:\Study\Thief\Программирование в Интернет\LAB4\LB4_CLIENTS\WINFORM_SUM\WINFORM_SUM\obj\Debug\WINFORM_SUM.pdb
